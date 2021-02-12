@@ -2,7 +2,7 @@ for i in range(1, 1000, 2):
     number = i ** 3
     summa = 0
     j = 1
-    while(True):
+    while True:
         temp = number % 10**j // 10**(j-1)
         summa += temp
         if number // 10**(j-1) == 0:

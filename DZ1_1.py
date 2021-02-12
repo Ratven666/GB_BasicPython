@@ -15,4 +15,3 @@ elif minutes != 0:
     print(minutes, "мин", seconds, "сек")
 else:
     print(seconds, "сек")
-
