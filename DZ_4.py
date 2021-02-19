@@ -1,7 +1,6 @@
 def thesaurus_adv(*args: str) -> dict:
-    name_list = list(args)
     result = {}
-    for name in name_list:
+    for name in args:
         name_list = name.split(" ")
         if name_list[1][0] in result.keys():
             result[name_list[1][0]].append(name)
@@ -20,6 +19,7 @@ def thesaurus_adv(*args: str) -> dict:
                 temp[name_list[0][0]] = []
                 temp[name_list[0][0]].append(name)
         result[key] = temp
+    temp.clear()
     for key in sorted(result.keys()):
         temp[key] = result[key]
     result = temp
