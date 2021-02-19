@@ -25,4 +25,4 @@ def get_jokes(n: int, rep_word_flag = False, fwl=funny_words_list) -> list:
 
 print(get_jokes(4))
 print(get_jokes(6))
-print(get_jokes(10, True))
+print(get_jokes(n=10, rep_word_flag=True))
