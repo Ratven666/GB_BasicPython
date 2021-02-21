@@ -1,4 +1,10 @@
 def thesaurus(*args: str) -> dict:
+    """
+    Функция возвращает отсортированный по алфавиту словарь с именами, где ключи - первые буквы имен
+
+    :param args: набор имен сортируемых в словарь
+    :return: словарь с именами
+    """
     name_list = sorted(list(args))
     result = {}
     for name in name_list:
@@ -12,3 +18,4 @@ def thesaurus(*args: str) -> dict:
 
 a = thesaurus("Иван", "Мария", "Петр", "Илья")
 print(a)
+print(thesaurus.__doc__)

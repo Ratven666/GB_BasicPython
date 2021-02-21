@@ -22,7 +22,16 @@ france_rus_dict = {"un": "один",
 
 
 def num_translate(str_number: str, dictionary: dict = eng_rus_dict) -> str:
+    """
+    Переводит числительные от 1 до 10 на русский язык
+
+    :str_number: числительное, требующее перевода
+    :dictionary: словарь с переводом (по умолчанию - английский)
+    :return: str с переводом
+    """
     return dictionary.get(str_number)
 
 
 print(num_translate("two"))
+
+print(num_translate.__doc__)

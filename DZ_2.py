@@ -22,6 +22,14 @@ france_rus_dict = {"un": "один",
 
 
 def num_translate_adv(str_number: str, dictionary: dict = eng_rus_dict) -> str:
+    """
+    Переводит числительные от 1 до 10 на русский язык с учетом регистра первой буквы
+
+    :str_number: числительное, требующее перевода
+    :dictionary: словарь с переводом (по умолчанию - английский)
+    :return: str с переводом
+    """
+
     if str_number[0].isupper():
         return dictionary.get(str_number.lower()).capitalize()
     return dictionary.get(str_number)
@@ -32,3 +40,5 @@ print(num_translate_adv("One"))
 print(num_translate_adv("Two"))
 print(num_translate_adv("six"))
 print(num_translate_adv("Quatre", france_rus_dict))
+
+print(num_translate_adv.__doc__)
