@@ -125,6 +125,7 @@ def get_file_with_bad_lines(fileName, RE_COMPILE, sourceFile="log.txt"):
                 file2.write(line)
                 print(line.strip())
         print(count)
+        print()
     return 0
 
 

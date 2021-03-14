@@ -25,6 +25,12 @@ import re
 
 
 def email_parse(email: str):
+    """
+    Функция возвращающая имя пользователя и почтовый домен из email адреса в виде словаря
+    Если адрес не коррктный, то выкидывает исключение ValueError: wrong email: :param email
+    :param email: проверяемый е-мэйл адрес
+    :return: словарь по типу 'username': 'someone', 'domain': 'geekbrains.ru'
+    """
     email = email.strip()
     rez = re.match(r"(?P<username>[\w'._+-]+)@(?P<domain>[\w\-]+\.[\w\-.]+)", email, re.ASCII)
     if type(rez) is re.Match:
@@ -34,4 +40,4 @@ def email_parse(email: str):
 
 
 print(email_parse("  someone@geekbrains.ru"))
-# print(email_parse("someone@geekbrainsru"))
+print(email_parse("someone@geekbrainsru"))

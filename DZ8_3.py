@@ -17,6 +17,11 @@
 # calc_cube(5: <class 'int'>)
 
 def type_logger(func):
+    """
+    Обертка логирующая тип переданных аргументов
+    :param func:
+    :return:
+    """
     def wrapper(*args, **kwargs):
         print(f"{func.__name__}(")
         for arg in args:
@@ -32,11 +37,23 @@ def type_logger(func):
 
 @type_logger
 def calc_cube(x, y):
+    """
+    Возводит число в куб
+    :param x: число
+    :param y: просто для того чтобы что-то передать
+    :return: куб числа
+    """
     return x ** 3
 
 
 @type_logger
 def print_pet_names(*owners, **pets):
+    """
+    Выводит в косоль имена хозяев и их животных их типу
+    :param owners: хозяева (неименованые типом аргументы)
+    :param pets: (именованые аргументы - тип=имя)
+    :return:
+    """
     print(f"Owners Name: {owners}")
     for pet, name in pets.items():
         print(f"{pet}: {name}")
